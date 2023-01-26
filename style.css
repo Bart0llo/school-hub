@@ -8,7 +8,12 @@ body {
   color: #ff0040;
   font-family: "Abril Fatface", Arial, Helvetica, sans-serif;
 }
-#bg {
+a {
+  color: inherit;
+  text-decoration: none;
+  z-index: 10;
+}
+#bg canvas {
   position: fixed;
   width: 100%;
   height: 100%;
@@ -20,9 +25,8 @@ main {
   min-height: 100vh;
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: space-around;
   flex-direction: column;
-  pointer-events: none;
 }
 .title {
   margin-top: 20px;
@@ -30,7 +34,6 @@ main {
   font-weight: 500;
 }
 .cards {
-  margin-top: 50px;
   width: 80vw;
   flex-wrap: wrap;
   display: flex;
@@ -39,9 +42,27 @@ main {
   gap: 25px;
 }
 .card {
+  cursor: pointer;
   width: 250px;
   height: 300px;
   border-radius: 20px;
   border: 2px solid #ff0040;
   box-shadow: -5px 0px 10px #66001a, 5px 0px 10px #66001a;
+  backdrop-filter: blur(4px);
+  background: rgb(255, 0, 64, 0.15);
+  transition: all 0.3s ease-out;
+}
+.card:hover {
+  transform: translateY(-15px) scale(1.005) translateZ(0);
+}
+footer {
+  background: rgb(255, 0, 64, 0.15);
+  border: 2px solid #ff0040;
+  box-shadow: -5px 0px 10px #66001a, 5px 0px 10px #66001a;
+  width: 220px;
+  height: 50px;
+  border-radius: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
