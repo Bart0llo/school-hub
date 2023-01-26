@@ -5,7 +5,7 @@
 }
 body {
   background: #010a08;
-  color: #ff0040;
+  color: #d3dbdd;
   font-family: "Abril Fatface", Arial, Helvetica, sans-serif;
 }
 a {
@@ -27,6 +27,7 @@ main {
   align-items: center;
   justify-content: space-around;
   flex-direction: column;
+  user-select: none;
 }
 .title {
   margin-top: 20px;
@@ -42,23 +43,42 @@ main {
   gap: 25px;
 }
 .card {
-  cursor: pointer;
   width: 250px;
   height: 300px;
+  padding: 5px;
   border-radius: 20px;
-  border: 2px solid #ff0040;
-  box-shadow: -5px 0px 10px #66001a, 5px 0px 10px #66001a;
+  border: 2px solid #d3dbdd;
+  box-shadow: -5px 0px 10px #545858, 5px 0px 10px #545858;
   backdrop-filter: blur(4px);
-  background: rgb(255, 0, 64, 0.15);
+  background: rgb(211, 219, 221, 0.15);
   transition: all 0.3s ease-out;
+  
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
 }
 .card:hover {
   transform: translateY(-15px) scale(1.005) translateZ(0);
 }
+.card .title-card {
+  font-size: 30px;
+}
+.card .button-card {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 18px;
+  border-radius: 10px;
+  width: 80%;
+  height: 35px;
+  background: #010a08;
+}
 footer {
-  background: rgb(255, 0, 64, 0.15);
-  border: 2px solid #ff0040;
-  box-shadow: -5px 0px 10px #66001a, 5px 0px 10px #66001a;
+  background: rgb(211, 219, 221, 0.15);
+  border: 2px solid #d3dbdd;
+  box-shadow: -5px 0px 10px #545858, 5px 0px 10px #545858;
   width: 220px;
   height: 50px;
   border-radius: 50px;
