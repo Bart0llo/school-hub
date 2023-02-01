@@ -33,6 +33,7 @@ main {
   margin-top: 20px;
   font-size: 60px;
   font-weight: 500;
+  text-align: center;
 }
 .cards {
   width: 80vw;
@@ -44,7 +45,6 @@ main {
 }
 .card {
   width: 250px;
-  height: 300px;
   padding: 5px;
   border-radius: 20px;
   border: 2px solid #d3dbdd;
@@ -52,7 +52,8 @@ main {
   backdrop-filter: blur(4px);
   background: rgb(211, 219, 221, 0.15);
   transition: all 0.3s ease-out;
-  
+  padding: 10px;
+
   display: flex;
   justify-content: space-around;
   align-items: center;
@@ -64,6 +65,9 @@ main {
 }
 .card .title-card {
   font-size: 30px;
+}
+.card .content-card {
+  margin: 20px;
 }
 .card .button-card {
   display: flex;
@@ -85,4 +89,14 @@ footer {
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+@media only screen and (max-width: 720px) {
+  main {
+    justify-content: center;
+    margin: 10px;
+  }
+  .cards {
+    margin: 50px 0;
+  }
 }
